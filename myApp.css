@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(89, 89, 89);
+}
+
+h1 {
+    text-align: center;
+}
+
+#search-container {
+    text-align: center;
+}
+
+#delete-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.appendedImg {
+    border: 5px solid black;
+    border-radius: 15px;
+}
+

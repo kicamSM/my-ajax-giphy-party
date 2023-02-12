@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <link href="myApp.css" rel="stylesheet">
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
 </head>
-
+<h1>WELCOME TO THE GIPHY PARTY</h1>
 <body>
 <form method="get" class="form-class" action="" id="search-form">
-  <div class="form-class">
+  <div class="form-class" id="search-container">
     <input type="text" placeholder="Enter a search term" type="submit" id="input">
     <button type="button" id="search">Search Giphy!</button>
   </div>
 </form>
 <form method="get" class="form-class" action="" id="delete-form">
-  <div class="form-class">
+  <div class="form-class" id="delete-container">
   <button type="button" id="delete">Remove Giphys</button>  
   </div>
 </form>
-<img src="" alt="" id="giphy">
+<!-- <img src="" alt="" id="giphy"> -->
+<div id="image-div">
+  <!-- <ul id="image-ul"></ul> -->
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
 <script src="myApp.js"></script>

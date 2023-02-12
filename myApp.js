@@ -6,8 +6,13 @@ async function getGiphy(searchTerm) {
     console.log(response.data);
     const img = document.getElementById('giphy');
     const maxCnt = response.data['data'].length; 
-    const rndmNum = Math.floor(Math.random * maxCnt)
-    img.src = response.data['data'][40]['images']['original']['url'];
+    const rndmNum = Math.floor(Math.random * maxCnt);
+    const createdImg = document.createElement('img');
+    createdImg.setAttribute('src', "");
+    createdImg.setAttribute('class', 'appendedImg');
+    const imgDiv = document.getElementById('image-div');
+    imgDiv.append(createdImg);
+    createdImg.src = response.data['data'][32]['images']['original']['url'];
         //nothing outside of 50 works for cat 
     // const img = response.data.images.url
     // for(let url of images)
@@ -19,7 +24,7 @@ async function getGiphy(searchTerm) {
 // console.log(response.data['pagination']['total_count'])
 console.log(Math.floor(Math.random() * (maxCnt)))
 console.log(response.data['data'].length)
-console.log(response.data['data'][rndmNum]['images']['original']['url'])
+// console.log(response.data['data'][rndmNum]['images']['original']['url'])
 }
 
 const input = document.getElementById('input')
@@ -31,10 +36,9 @@ searchButton.addEventListener("click", function(e) {
 } )
 //todo figure out how to change that to submit instead of click 
 
-const img = getElementById('giphy')
+const appendedImg = document.getElementsByClassName('appendedImg');
 const deleteButton = document.getElementById('delete-form');
 deleteButton.addEventListener("click", function(e) {
     e.preventDefault();
-img.src = "";
-//this button still doesnt work
+$('.appendedImg').remove();
 } )
